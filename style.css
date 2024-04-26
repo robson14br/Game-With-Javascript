@@ -3,7 +3,43 @@
     padding: 0;
     box-sizing: border-box;
 }
+#startButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2; /* Define a ordem de empilhamento */
+}
+#resetButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1; /* Define a ordem de empilhamento */
+    display: none; /* Inicialmente esconde o botão de reset */
+}
 
+
+#score {
+    position: absolute;
+    font: normal 20pt Arial;
+    color: #fffb0b;
+    top:  20px;
+}
 .game-board {
     width: 100%;
     height: 500px;
