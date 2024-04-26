@@ -2,7 +2,7 @@ const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const startButton = document.getElementById('startButton');
 const resetButton = document.getElementById('resetButton');
-
+let scoreDisplay = document.querySelector('#score')
 
 let gameStarted = false; // Variável para controlar se o jogo começou ou não
 let score = 0; // Variável para armazenar o número de pontos
@@ -39,9 +39,9 @@ const loop = setInterval(() => {
             location.reload();
         });
 
-    } else if (pipePosition === 0) {
-        score += 100 // Incrementa o número de pontos a cada cano pulado
-        document.getElementById('score').innerText = `Pontuação: ${score}`;
+    } else if (pipePosition <= 0 && pipePosition > -10) {
+        score += 100; // Incrementa o número de pontos a cada cano pulado
+        scoreDisplay.innerText = `Pontuação: ${score}`;
     }
     
 }, 10);
