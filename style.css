@@ -1,112 +1,107 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 #startButton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 2; /* Define a ordem de empilhamento */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2; /* Define a ordem de empilhamento */
 }
 #resetButton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1; /* Define a ordem de empilhamento */
-    display: none; /* Inicialmente esconde o botão de reset */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1; /* Define a ordem de empilhamento */
+  display: none; /* Inicialmente esconde o botão de reset */
 }
-
 
 #score {
-    position: absolute;
-    font: normal 20pt Arial;
-    color: #fafaf9;
-    top:  20px;
+  position: absolute;
+  font: normal 20pt Arial;
+  color: #fafaf9;
+  top: 20px;
 }
 .game-board {
-    width: 100%;
-    height: 500px;
-    border-bottom: 10px solid green;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(#87ceeb, #e0f6ff);
+  width: 100%;
+  height: 500px;
+  border-bottom: 10px solid green;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#87ceeb, #e0f6ff);
 }
 .pipe {
-    position: absolute;
-    bottom: 0;
-    height: 80px;
-    animation: pipe-animation 1s infinite linear;
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  animation: pipe-animation 1s infinite linear;
 }
 
 .clouds {
-    width: 500px;
-    position: absolute;
-    animation: clouds-animation 20s infinite linear;
+  width: 500px;
+  position: absolute;
+  animation: clouds-animation 20s infinite linear;
 }
 
 .mario {
-    height: 140px;
-    position: absolute;
-    bottom: 0;
-   
+  height: 140px;
+  position: absolute;
+  bottom: 0;
 }
 .jump {
-    animation: jump 500ms ease-out; 
+  animation: jump 500ms ease-out;
 }
 
 @keyframes jump {
-    0% {
-        bottom: 0;
-    }
-    40% {
-        bottom: 180px;
-    }
-    50% {
-        bottom: 180px;
-    }
-    60% {
-        bottom: 180px;
-    }
-    100% {
-        bottom: 0%;
-    }
-    
-        
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 180px;
+  }
+  50% {
+    bottom: 180px;
+  }
+  60% {
+    bottom: 180px;
+  }
+  100% {
+    bottom: 0%;
+  }
 }
 
 @keyframes pipe-animation {
-    from {
-        right: -90px
-    }
-    to {
-        right: 100%;
-    }
+  from {
+    right: -90px;
+  }
+  to {
+    right: 100%;
+  }
 }
 
 @keyframes clouds-animation {
-    from {
-        right:-500px;
-    }
-    to {
-        right: 100%;
-    }
-
+  from {
+    right: -500px;
+  }
+  to {
+    right: 100%;
+  }
 }
