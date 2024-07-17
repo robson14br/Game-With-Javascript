@@ -20,4 +20,4 @@ Evadir os Obstáculos: Pule sobre os canos que se movem da direita para a esquer
 Pontuação: A cada cano ultrapassado, a pontuação aumenta. Continue jogando para alcançar a maior pontuação possível.<br>
 Reiniciar o Jogo: Se o Mario colidir com um cano, clique no botão "Reiniciar Jogo" para tentar novamente. <br> <br>
 
-<p>Start <a href=""https://robson14br.github.io/Game-With-Javascript/" target="_blank">Game</a></p>
+<p>Start <a href=""https://robson14br.github.io/Game-With-Javascript/">Game</a></p>
