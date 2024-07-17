@@ -3,11 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-#startButton {
+
+#startButton, #resetButton {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   padding: 10px 20px;
   font-size: 18px;
   background-color: #4caf50;
@@ -15,21 +16,10 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 2; /* Define a ordem de empilhamento */
+  z-index: 2;
 }
+
 #resetButton {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1; /* Define a ordem de empilhamento */
   display: none; /* Inicialmente esconde o botão de reset */
 }
 
@@ -38,70 +28,66 @@
   font: normal 20pt Arial;
   color: #fafaf9;
   top: 20px;
+  left: 20px;
 }
+
 .game-board {
-  width: 100%;
-  height: 500px;
+  width: 100vw;
+  height: 100vh;
   border-bottom: 10px solid green;
   margin: auto;
   position: relative;
   overflow: hidden;
   background: linear-gradient(#87ceeb, #e0f6ff);
 }
+
 .pipe {
   position: absolute;
   bottom: 0;
-  height: 80px;
+  height: 15vh;
   animation: pipe-animation 1s infinite linear;
 }
 
 .clouds {
-  width: 500px;
+  width: 60vw;
   position: absolute;
   animation: clouds-animation 20s infinite linear;
 }
 
 .mario {
-  height: 140px;
+  height: 28vh;
   position: absolute;
   bottom: 0;
 }
+
 .jump {
   animation: jump 500ms ease-out;
 }
 
 @keyframes jump {
-  0% {
-    bottom: 0;
-  }
-  40% {
-    bottom: 180px;
-  }
-  50% {
-    bottom: 180px;
-  }
-  60% {
-    bottom: 180px;
-  }
-  100% {
-    bottom: 0%;
-  }
+  0% { bottom: 0; }
+  40%, 50%, 60% { bottom: 36vh; }
+  100% { bottom: 0; }
 }
 
 @keyframes pipe-animation {
-  from {
-    right: -90px;
-  }
-  to {
-    right: 100%;
-  }
+  from { right: -15vw; }
+  to { right: 100%; }
 }
 
 @keyframes clouds-animation {
-  from {
-    right: -500px;
+  from { right: -100vw; }
+  to { right: 100%; }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  #startButton, #resetButton {
+    font-size: 16px;
+    padding: 8px 16px;
   }
-  to {
-    right: 100%;
+
+  #score {
+    font-size: 16pt;
   }
 }
