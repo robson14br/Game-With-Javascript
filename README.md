@@ -18,4 +18,6 @@ Teclado: Pressione a tecla de espaço para fazer o Mario pular.<br>
 Toque na Tela: Toque em qualquer lugar na tela para fazer o Mario pular.<br>
 Evadir os Obstáculos: Pule sobre os canos que se movem da direita para a esquerda da tela.<br>
 Pontuação: A cada cano ultrapassado, a pontuação aumenta. Continue jogando para alcançar a maior pontuação possível.<br>
-Reiniciar o Jogo: Se o Mario colidir com um cano, clique no botão "Reiniciar Jogo" para tentar novamente.<br>
+Reiniciar o Jogo: Se o Mario colidir com um cano, clique no botão "Reiniciar Jogo" para tentar novamente. <br> <br>
+
+<p>Start <a href=""https://robson14br.github.io/Game-With-Javascript/" target="_blank">Game</a></p>
