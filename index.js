@@ -39,7 +39,7 @@ const gameLoop = () => {
       });
     } else if (pipePosition <= 0 && pipePosition > -10) {
       score += 100; // Incrementa o número de pontos a cada cano pulado
-      scoreDisplay.innerText = `Pontuação: ${score}`;
+      scoreDisplay.innerHTML = `Pontuação: ${score}`;
     }
   }, 10);
 };
