@@ -6,6 +6,7 @@ let scoreDisplay = document.querySelector("#score");
 
 let gameStarted = false; // Variável para controlar se o jogo começou ou não
 let score = 0; // Variável para armazenar o número de pontos
+let pipeScored = false; // Variável para controlar se o cano já foi pontuado
 
 const jump = () => {
   if (gameStarted) { // Verifica se o jogo começou
@@ -19,9 +20,11 @@ const jump = () => {
 const gameLoop = () => {
   const loop = setInterval(() => {
     if (!gameStarted) return; // Se o jogo não começou, não executa o loop
+    
     const pipePosition = pipe.offsetLeft;
     const marioPosition = Number(window.getComputedStyle(mario).bottom.replace("px", ""));
-
+    
+    // Verifica colisão
     if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
       pipe.style.animation = "none";
       pipe.style.left = `${pipePosition}px`;
@@ -37,10 +40,20 @@ const gameLoop = () => {
       resetButton.addEventListener("click", () => {
         location.reload();
       });
-    } else if (pipePosition <= 0 && pipePosition > -10) {
-      score += 100; // Incrementa o número de pontos a cada cano pulado
+    } 
+
+    // Incrementa a pontuação se o cano passou do Mario
+    if (pipePosition < 0 && !pipeScored) {
+      score += 100;
       scoreDisplay.innerHTML = `Pontuação: ${score}`;
+      pipeScored = true; // Marca o cano como já pontuado
     }
+
+    // Reseta a variável pipeScored quando o cano sai da tela para que a pontuação possa ser incrementada novamente
+    if (pipePosition >= window.innerWidth) {
+      pipeScored = false;
+    }
+
   }, 10);
 };
 
